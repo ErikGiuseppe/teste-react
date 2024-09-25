@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                      FLAGCON 
                     </Typography>
 
                     <Box className="flex md:hidden" sx={{ flexGrow: 1 }}>
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        FLAGCON
                     </Typography>
                     <Box className="hidden md:flex" sx={{ flexGrow: 1,  }}>
                         {pages.map((page, index) => (
