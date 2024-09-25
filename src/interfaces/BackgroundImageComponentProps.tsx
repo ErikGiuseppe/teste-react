@@ -3,7 +3,8 @@ export interface BackgroundImageComponentProps {
     title?: string,
     text?: string,
     textColor?: string,
-    textButton?: string[],
+    textButton?: string,
+    containedButton?: string,
     backGroudColor?: string
 }
 

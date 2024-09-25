@@ -10,8 +10,9 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import Logo from '../../public/logo.png'
 
-const pages = [{ name: 'Home', path: '/'}, ];
+const pages = [{ name: 'Home', path: '/' },];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -28,17 +29,22 @@ function ResponsiveAppBar() {
 
 
     return (
-        <AppBar sx={{background:'white'}} position="static">
+        <AppBar sx={{ background: 'white' }} position="static">
             <Container className="bg-white text-black" maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    <img
+                        className="hidden md:flex"
+                        src={Logo}
+                        alt="Logo"
+                        style={{ marginRight: '8px', height: '40px', }} // oculta por padrão
+                    />
                     <Typography
                         variant="h6"
                         noWrap
                         component="a"
+                        className="hidden md:flex"
                         sx={{
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
@@ -49,7 +55,7 @@ function ResponsiveAppBar() {
                         LOGO
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box className="flex md:hidden" sx={{ flexGrow: 1 }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -74,7 +80,7 @@ function ResponsiveAppBar() {
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{ display: { xs: 'block', md: 'none' } }}
+                            className="flex md:hidden"
                         >
                             {pages.map((page, index) => (
                                 <MenuItem key={index} >
@@ -85,14 +91,19 @@ function ResponsiveAppBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <img
+                        src={Logo}
+                        alt="Logo"
+                        className="flex md:hidden"
+                        style={{ marginRight: '8px', height: '30px' }} // exibe por padrão
+                    />
                     <Typography
                         variant="h5"
                         noWrap
                         component="a"
+                        className="flex md:hidden"
                         sx={{
                             mr: 2,
-                            display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontFamily: 'monospace',
                             fontWeight: 700,
@@ -103,7 +114,7 @@ function ResponsiveAppBar() {
                     >
                         LOGO
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box className="hidden md:flex" sx={{ flexGrow: 1,  }}>
                         {pages.map((page, index) => (
                             <Link key={index} className="my-2 mr-3 display: block" to={page.path}>
                                 {page.name}

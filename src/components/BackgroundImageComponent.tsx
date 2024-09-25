@@ -9,7 +9,8 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
         text,
         textButton,
         textColor,
-        backGroudColor
+        backGroudColor,
+        containedButton
     } = props
     return (
         <Box
@@ -24,13 +25,23 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
             }}
             className="flex flex-col items-center justify-center"
         >
-            <h2 className='text-center {textColor} text-3xl'> {title} </h2>
+            {title ? <h2 className={`text-center font-mono ${textColor} text-sm md:text-base lg:text-lg xl:text-2xl`}> {title} </h2> : null}
 
-            <p className='text-center {textColor} text-3xl'> {text} </p>
-            <div className='pr-3'>
-                {textButton?.map((buttonText, index) => (
-                    <Button variant="text" key={index}>{buttonText}</Button>
-                ))}
+            {text ? <p className={`text-center font-mono${textColor} text-xs md:text-sm lg:text-base xl:text-xl`}> {text} </p> : null}
+
+
+            <div className='pr-3 my-1'>
+
+                {textButton ? (
+                    <Button variant="text" sx={{ fontSize: { xs: '0.75rem', sm: '1rem',  } }}>
+                        {textButton}
+                    </Button>
+                ) : null}
+                {containedButton ? (
+                    <Button variant="contained" color='warning' sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
+                        {containedButton}
+                    </Button>
+                ) : null}
             </div>
 
         </Box>
