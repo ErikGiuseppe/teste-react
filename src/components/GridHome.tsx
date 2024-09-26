@@ -58,7 +58,7 @@ export default function RowAndColumnSpacing() {
                     </Item>
 
                 </Grid>
-                <Grid className="px-0 h-72 mb-5  md:h-80 lg:h-96 xl:h-96 w-screen" size={6}>
+                <Grid className="px-0 h-72 mb-3  md:h-80 lg:h-96 xl:h-96 w-screen" size={6}>
 
                     <BackgroundImageComponent
 
