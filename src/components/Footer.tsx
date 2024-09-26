@@ -1,5 +1,10 @@
 
 export default function Footer() {
+    const newUrl = (produto:string) => {
+        const url= `https://api.whatsapp.com/send?phone=5511999339150&text=Olá, gostaria de falar sobre um consórcio de ${produto}`
+        window.open(url, '_blank')
+
+    };
     return (
         <footer
             className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
@@ -100,19 +105,19 @@ export default function Footer() {
                             Produtos
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => newUrl('Automóveis')}
                             >Automóveis</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => newUrl('Imóveis')}
                             >Imóveis</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => newUrl('Caminhões')}
                             >Caminhões</a>
                         </p>
                         <p>
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => newUrl('Serviços')}
                             >Serviços</a>
                         </p>
                     </div>
@@ -136,7 +141,7 @@ export default function Footer() {
                     <div>
                         <h6
                             className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                           Fale Conosco 
+                            Fale Conosco
                         </h6>
 
                         <p className="mb-4 flex items-center justify-center md:justify-start">
@@ -165,7 +170,7 @@ export default function Footer() {
                             </svg>
                             + 11 99933-9150
                         </p>
-                        
+
                     </div>
                 </div>
             </div>
