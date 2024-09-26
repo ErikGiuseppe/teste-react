@@ -57,6 +57,7 @@ export default function RowAndColumnSpacing() {
                             text='Você deseja conquistar a casa dos seus sonhos, mas não quer se endividar com altas taxas de juros? O consórcio de casas é a alternativa perfeita para quem busca uma forma planejada e econômica de adquirir o seu imóvel.'
                             containedButton='Simule Agora'
                             textWhats='Olá, gostaria de falar sobre um consórcio de imóveis'
+                            id='imoveis'
                         />
                     </Item>
 

@@ -11,7 +11,8 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
         textColor,
         backGroudColor,
         containedButton,
-        textWhats
+        textWhats,
+        id
 
     } = props
     let url = ''
@@ -32,6 +33,8 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
                 backgroundRepeat: 'no-repeat' // Não repete a imagem
             }}
             className={`flex flex-col items-center ${backGroudColor} justify-center`}
+            id={id}
+
         >
             {title ? <h2 className={`text-center font-mono ${textColor} text-sm md:text-base lg:text-lg xl:text-2xl`}> {title} </h2> : null}
 
