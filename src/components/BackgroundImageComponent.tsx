@@ -10,8 +10,17 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
         textButton,
         textColor,
         backGroudColor,
-        containedButton
+        containedButton,
+        textWhats
+
     } = props
+    let url = ''
+    
+    const newUrl = () => {
+        url = `https://api.whatsapp.com/send?phone=5511999339150&text=${textWhats}`
+        window.open(url, '_blank')
+
+    };
     return (
         <Box
             sx={{
@@ -32,12 +41,12 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
             <div className='pr-3 my-1'>
 
                 {textButton ? (
-                    <Button variant="text" sx={{ fontSize: { xs: '0.75rem', sm: '1rem',  } }}>
+                    <Button variant="text" sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
                         {textButton}
                     </Button>
                 ) : null}
                 {containedButton ? (
-                    <Button variant="contained" color='warning' sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
+                    <Button onClick={newUrl} variant="contained" color='warning' sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
                         {containedButton}
                     </Button>
                 ) : null}

@@ -123,11 +123,11 @@ export default function Footer() {
                             Parceiras
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" href="https://www.bb.com.br/site/pra-voce/consorcios/"
                             >Banco do Brasil</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
+                            <a className="text-neutral-600 dark:text-neutral-200" href="https://www.redepromotiva.com.br/"
                             >Promotiva</a>
                         </p>
 

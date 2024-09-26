@@ -29,6 +29,7 @@ export default function RowAndColumnSpacing() {
                         containedButton='Simule Agora'
                         image='url(/public/Home-Auto-Life-Insurance.jpg)'
                         textColor='text-black'
+                        textWhats='Olá, gostaria de falar com um atendente.'
                     />
 
                 </Grid>
@@ -44,6 +45,7 @@ export default function RowAndColumnSpacing() {
                             title='A Sua Chance de Conquistar o Veículo dos Seus Sonhos!'
                             text='Você sonha em ter um carro novo, mas não quer pagar altas taxas de juros? O consórcio de carros é a solução ideal para você! Com ele, você pode planejar a compra do seu veículo de forma inteligente e econômica.'
                             containedButton='Simule Agora'
+                            textWhats='Olá, gostaria de falar sobre um consórcio de automóveis'
 
                         />
                     </Item>
@@ -54,6 +56,7 @@ export default function RowAndColumnSpacing() {
                             title='Realize o Sonho do Lar Próprio!'
                             text='Você deseja conquistar a casa dos seus sonhos, mas não quer se endividar com altas taxas de juros? O consórcio de casas é a alternativa perfeita para quem busca uma forma planejada e econômica de adquirir o seu imóvel.'
                             containedButton='Simule Agora'
+                            textWhats='Olá, gostaria de falar sobre um consórcio de imóveis'
                         />
                     </Item>
 
