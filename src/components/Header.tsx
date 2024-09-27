@@ -19,14 +19,14 @@ function ResponsiveAppBar() {
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
+        handleCloseNavMenu()
     };
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
     };
 
-    const handleCloseNavMenu = (page: string) => {
-        console.log(page)
+    const handleCloseNavMenu = () => {
 
         setAnchorElNav(null);
     };
