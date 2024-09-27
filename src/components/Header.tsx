@@ -8,14 +8,18 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { Link } from 'react-router-dom';
 import Logo from '../../public/logo.png'
 
-const pages = [{ name: 'Imóveis', path: '#imoveis' },];
+const pages = [{ name: 'Produtos', id: 'produtos' },];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
@@ -84,9 +88,9 @@ function ResponsiveAppBar() {
                         >
                             {pages.map((page, index) => (
                                 <MenuItem key={index} >
-                                    <Link key={index} className="my-2 mr-3 display: block" to={page.path}>
+                                    <a key={index} className="my-2 mr-3 display: block" onClick={() => scrollToSection(page.id)}>
                                         {page.name}
-                                    </Link>
+                                    </a>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -118,7 +122,7 @@ function ResponsiveAppBar() {
                     <Box className="hidden md:flex" sx={{ flexGrow: 1, }}>
                         {pages.map((page, index) => (
                             <MenuItem key={index} >
-                                <a key={index} className="my-2 mr-3 display: block" href={page.path}>
+                                <a key={index} className="my-2 mr-3 display: block" onClick={() => scrollToSection(page.id)}>
                                     {page.name}
                                 </a>
                             </MenuItem>

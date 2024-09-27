@@ -16,7 +16,7 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
 
     } = props
     let url = ''
-    
+
     const newUrl = () => {
         url = `https://api.whatsapp.com/send?phone=5511999339150&text=${textWhats}`
         window.open(url, '_blank')
@@ -30,7 +30,9 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
                 backgroundImage: image ? image : null, // Caminho da imagem
                 backgroundSize: 'cover',  // Faz a imagem cobrir todo o box
                 backgroundPosition: 'center', // Centraliza a imagem
-                backgroundRepeat: 'no-repeat' // Não repete a imagem
+                backgroundRepeat: 'no-repeat', // Não repete a imagem
+                borderRadius: '16px'
+
             }}
             className={`flex flex-col items-center ${backGroudColor} justify-center`}
             id={id}
@@ -49,7 +51,7 @@ function BackgroundImageComponent(props: BackgroundImageComponentProps) {
                     </Button>
                 ) : null}
                 {containedButton ? (
-                    <Button onClick={newUrl} variant="contained" color='warning' sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
+                    <Button onClick={newUrl} size='small' variant="contained" color='warning' sx={{ fontSize: { xs: '0.75rem', sm: '1rem', } }}>
                         {containedButton}
                     </Button>
                 ) : null}

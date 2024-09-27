@@ -1,9 +1,10 @@
 import Headers from "../components/Header.tsx"
 import BackgroundImageComponent from "../components/BackgroundImageComponent.tsx"
-import { Fab } from "@mui/material"
+import { Box, Button, Fab } from "@mui/material"
 import Footer from "../components/Footer.tsx"
 import GridHome from "../components/GridHome.tsx"
 const Home = () => {
+
     const redirect = () => {
         const url = `https://api.whatsapp.com/send?phone=5511999339150&text=Olá, gostaria de falar com um atendente.`
         window.open(url, '_blank')
@@ -12,6 +13,71 @@ const Home = () => {
     return (
         <div>
             <Headers />
+            <Box className="px-0 h-52  md:h-80 lg:h-96 xl:h-96 w-full" >
+                <Box
+                    sx={{
+                        width: '100%',       // Largura 100% da viewport
+                        height: '100%',      // Altura 100% da viewport
+                        backgroundImage: 'url(/public/Home-Auto-Life-Insurance.jpg)', // Caminho da imagem
+                        backgroundSize: 'cover',  // Faz a imagem cobrir todo o box
+                        backgroundPosition: 'center', // Centraliza a imagem
+                        backgroundRepeat: 'no-repeat' // Não repete a imagem
+                    }}
+                    className={`flex flex-col items-center  justify-center`}
+                    id='imageMenu'
+
+                >
+
+
+                    <Box
+                        sx={{
+                            height: '100%',      // Altura 100% da viewport
+                            backgroundSize: 'cover',  // Faz a imagem cobrir todo o box
+                            backgroundPosition: 'center', // Centraliza a imagem
+                            backgroundRepeat: 'no-repeat' // Não repete a imagem
+                        }}
+                        className='flex flex-col  items-center md:items-start w-screen lg:w-1/2  justify-center '
+
+                    >
+                        <h2 className='text-center   md:text-start font-mono  text-sm md:text-base lg:text-lg xl:text-2xl'>Realize Seus Sonhos com Nossos Consórcios!</h2>
+
+                        <p className='text-center md:text-start font-mono  text-xs md:text-sm lg:text-base xl:text-xl'>Você já imaginou conquistar aquele carro novo, a casa dos seus sonhos ou até mesmo fazer uma viagem inesquecível? Com nossos consórcios, isso é possível!</p>
+                        <div className="flex justify-center lg:justify-start w-full  mt-5">
+                            <Button
+                                onClick={redirect}
+                                variant="contained"
+                                size="small"
+                                color='warning'
+                                sx={{ fontSize: { xs: '0.75rem', sm: '1rem' } }}
+                            >
+                                Simule Agora
+                            </Button>
+                        </div>
+
+                    </Box>
+
+                </Box>
+
+            </Box>
+            <Box className="flex px-0  items-center justify-center   w-full" >
+
+                <Box
+                    sx={{
+                        height: '100%',      // Altura 100% da viewport
+                        backgroundSize: 'cover',  // Faz a imagem cobrir todo o box
+                        backgroundPosition: 'center', // Centraliza a imagem
+                        backgroundRepeat: 'no-repeat' // Não repete a imagem
+                    }}
+                    className='flex flex-col  items-center md:items-start w-screen lg:w-1/2  justify-center '
+                    id='produtos'
+
+                >
+                    <h2 className='text-center  md:text-start font-mono  text-sm md:text-base lg:text-lg xl:text-2xl'>Conquiste Seus Objetivos com Nossos Produtos: </h2>
+
+                    <p className='text-center md:text-start font-mono my-3 text-xs md:text-sm lg:text-base xl:text-xl'>Descubra como é fácil conquistar seus objetivos com nossos consórcios de automóveis, imóveis, caminhões e serviços! </p>
+
+                </Box>
+            </Box>
             <GridHome />
             <Footer />
             <Fab color="success" onClick={redirect} aria-label="add" style={{
