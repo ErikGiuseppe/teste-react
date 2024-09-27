@@ -133,11 +133,11 @@ export default function Footer() {
                             Parceiras
                         </h6>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200" href="https://www.bb.com.br/site/pra-voce/consorcios/"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => redirect('https://www.bb.com.br/site/pra-voce/consorcios/')}
                             >Banco do Brasil</a>
                         </p>
                         <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200" href="https://www.redepromotiva.com.br/"
+                            <a className="text-neutral-600 dark:text-neutral-200" onClick={() => redirect('https://www.redepromotiva.com.br/')}
                             >Promotiva</a>
                         </p>
 
